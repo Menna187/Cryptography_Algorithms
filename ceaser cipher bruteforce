@@ -1,0 +1,36 @@
+"""
+ceaser cipher bruteforce code
+by:Menna Elgaml
+"""
+#input
+plaintext=input("Enter the text:")
+alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#process
+def ceaser_encypt(plaintext,key):
+    ciphertext=""
+    for letter in plaintext:
+        ciphertext +=alphabet[(alphabet.index(letter)+key)%26]
+
+    return ciphertext
+
+def ceaser_decrypt(ciphertext,key):
+    plaintext = ""
+    for letter in ciphertext:
+        plaintext += alphabet[(alphabet.index(letter) -key) % 26]
+
+    return plaintext
+
+def bruteforce(ciphertext):
+    for i in range(1, 25):
+        print(f"{i}: {ceaser_decrypt(ciphertext, i)}")
+
+
+key=eval(input("Enter the key:"))
+ciphertext=ceaser_encypt(plaintext,key)
+plaintext=ceaser_decrypt(ciphertext, key)
+print(f"The Encypted text:",ciphertext)
+print(f"The Decrypted text:",plaintext)
+bruteforce_choice = input("Do you want to bruteforce the decrypted text? (yes/no): ")
+if bruteforce_choice.lower() == 'yes':
+    bruteforce(ciphertext)
