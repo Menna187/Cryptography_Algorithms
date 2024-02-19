@@ -5,15 +5,7 @@ by:Menna Elgaml
 #make sure numbers is a prime
 p=int(input("Enter a prime number(p):"))
 q=int(input("enter a prime number(q):"))
-def isPrime(u):
-    if u > 1:
-        for i in range(2,u):
-            if (u % i) == 0:
-                return False
-        return True
-    else:
-        return False
-
+from Crypto.Util.number import isPrime
 while not isPrime(p):
     print("Please enter a prime number.")
     p = int(input("Enter a prime number: "))
