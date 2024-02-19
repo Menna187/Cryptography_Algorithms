@@ -6,7 +6,6 @@ by:Menna Elgaml
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding
-from cryptography.hazmat.primitives import hashes
 import os
 
 def aes_cbc_encrypt(plaintext, key, iv):
