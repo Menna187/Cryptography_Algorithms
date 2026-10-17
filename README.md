@@ -1,2 +1,2 @@
 # Cryptography_Algorithms
-Codes that i do in Cryptography course @ aou
+Python implementations of cryptographic algorithms for learning, practice, and understanding core cryptography concepts.
